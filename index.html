@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr.Web - Проверка файлов онлайн</title>
+    <link rel="stylesheet" href="./online_form_drweb.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="drweb-container">
+        <!-- Анимированный фон с частицами -->
+        <div class="particles-background" id="particles"></div>
+        
+        <!-- Главная форма -->
+        <div class="drweb-card">
+            <!-- Шапка с логотипом -->
+            <div class="drweb-header">
+                <div class="logo-container">
+                    <a href="https://www.drweb.ru/" target="_blank" class="logo-link">
+                        <div class="logo-wrapper">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="134" height="24" viewBox="0 0 134 24" fill="#006AF5">
+                                <path d="M53.6706 11.1841C53.6706 7.51251 51.9517 2.7787 44.9225 2.7787H35.3839V19.4432H44.9225C52.2049 19.4432 53.6706 14.4862 53.6706 11.1841ZM42.0601 15.279V6.7043H43.403C45.0145 6.7043 46.6798 7.22771 46.6798 11.084C46.6798 14.9403 44.8918 15.279 43.403 15.279H42.0601ZM61.2446 14.8172C61.2446 12.6466 62.8331 11.6074 64.6979 11.6074C65.1461 11.6228 65.5912 11.6873 66.0254 11.7999V6.80436C65.6804 6.72544 65.3279 6.68415 64.9741 6.68121C64.0725 6.70615 63.2031 7.02334 62.4962 7.58531C61.7893 8.14728 61.2829 8.92379 61.0528 9.79859H60.9454V6.966H54.9982V19.4432H61.2446V14.8172ZM66.0254 19.4355H71.2896V14.8172H66.0024L66.0254 19.4355ZM90.8809 13.4317H90.7811L88.103 2.76331H81.726L78.9711 13.4317H78.8714L76.7534 2.76331H70.5146L74.6124 19.4278H81.8718L84.596 8.57473H84.6958L87.5811 19.4278H94.7101L98.9077 2.76331H92.9758L90.8809 13.4317ZM106.689 12.9468H114.808V9.25978H106.666V6.7043H115.276V2.76331H99.9667V19.4432H115.276V15.5099H106.666L106.689 12.9468ZM130.094 11.0225V10.9301C132.258 10.5452 133.624 8.99808 133.624 7.08146C133.624 5.54201 132.634 2.74792 127.193 2.74792H116.711V19.4432H126.817C129.027 19.4432 134 19.2046 134 14.9865C134 12.3695 131.844 11.2765 130.071 11.0378L130.094 11.0225ZM123.042 6.1424H124.761C126.595 6.1424 127.117 7.05067 127.117 7.73573C127.117 8.21296 126.894 9.35985 124.607 9.35985H123.073L123.042 6.1424ZM124.73 16.0487H123.042V12.6543H124.577C125.144 12.6543 127.209 12.6543 127.209 14.3477C127.193 14.9403 126.848 16.0641 124.707 16.0641L124.73 16.0487ZM11.4186 7.38166L16.4757 4.64913L21.5711 7.40475C21.6996 7.07356 21.7647 6.72102 21.7629 6.36562C21.7629 4.20269 19.4071 2.44772 16.4987 2.44772C13.5903 2.44772 11.2345 4.20269 11.2345 6.36562C11.2384 6.71228 11.3006 7.05579 11.4186 7.38166ZM24.6252 7.09686L28.1015 6.4195L28.8228 8.9211L30.5494 3.58691L23.5816 5.73445L24.6252 7.09686ZM25.5461 10.3374L28.7384 11.1071L28.0708 13.1546L32.936 10.6299L25.0857 8.39769L25.5461 10.3374ZM21.7859 23.9615L29.4597 14.9942L25.3773 12.6235L21.7859 23.9615ZM21.2641 3.16357L22.7298 4.65683L26.6588 0H21.0799L23.1826 1.26235L21.2641 3.16357ZM11.6949 3.16357L9.77643 1.26235L11.8714 0H6.30019L10.2292 4.66453L11.6949 3.16357ZM3.52995 15.0327L11.2038 24L7.61242 12.6543L3.52995 15.0327ZM4.8345 6.44259L8.31073 7.12765L9.3467 5.73445L2.38655 3.57922L4.12083 8.9211L4.8345 6.44259ZM4.20525 11.1148L7.39755 10.3451L7.85798 8.3746L0 10.6376L4.87287 13.1623L4.20525 11.1148ZM13.7668 7.72803L14.4344 10.2219H14.4728L15.4167 7.5279H17.5807L18.5783 10.2219L19.1538 7.73573L16.4373 6.19628L13.7668 7.72803ZM23.8579 10.3066L21.0186 8.76716L19.9903 11.7768H17.4579L16.4987 9.02117H16.4603L15.5011 11.7768H12.9534L11.9251 8.77486L9.08579 10.3143C9.08579 10.3143 8.04982 13.855 12.0018 16.7646C13.011 17.5938 14.1389 18.2658 15.3476 18.7582L15.2018 18.2425H17.8109L17.6344 18.7582C18.8433 18.2725 19.9675 17.5969 20.9648 16.7569C24.8478 13.8165 23.8579 10.3066 23.8579 10.3066ZM18.0718 17.3881H14.8795L14.5342 16.372H18.4171L18.0718 17.3881ZM18.7164 15.5099H14.2349L13.8896 14.5016H19.0387L18.7164 15.5099ZM19.3533 13.6318H13.598L13.2527 12.6235H19.6987L19.3533 13.6318Z"/>
+                            </svg>
+                            <span class="logo-glow"></span>
+                        </div>
+                    </a>
+                    <div class="security-badge">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Защищено Dr.Web</span>
+                    </div>
+                </div>
+                
+                <div class="header-content">
+                    <h1 class="main-title">
+                        <span class="title-text">Проверка файлов на вирусы</span>
+                        <span class="title-underline"></span>
+                    </h1>
+                    <p class="subtitle">Безопасная онлайн-проверка с помощью антивируса Dr.Web</p>
+                </div>
+            </div>
+
+            <!-- Статистика безопасности -->
+            <div class="security-stats">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-virus"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-value">15+ млн</div>
+                        <div class="stat-label">вирусов в базе</div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-value">24/7</div>
+                        <div class="stat-label">работает</div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="stat-content">
+                        <div class="stat-value">Мгновенно</div>
+                        <div class="stat-label">проверка</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Основная форма -->
+            <form class="drweb-form" method="POST" id="drweb_online_scan_form" enctype="multipart/form-data" action="https://online.drweb.com/result/" target="drweb_scan_drweb-form_popup_window">
+                <div class="form-container">
+                    <!-- Зона перетаскивания файлов -->
+                    <div class="upload-zone" id="uploadZone">
+                        <div class="upload-icon">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <div class="upload-pulse"></div>
+                        </div>
+                        <div class="upload-text">
+                            <h3>Перетащите файл сюда</h3>
+                            <p>или <span class="browse-link">выберите на компьютере</span></p>
+                            <p class="file-info">Максимальный размер файла: <strong>10 МБ</strong></p>
+                        </div>
+                        <input class="file-input" name="file" id="file_selection_input" type="file" title="Обзор">
+                    </div>
+
+                    <!-- Выбранные файлы -->
+                    <div class="selected-files" id="selectedFiles" style="display: none;">
+                        <h4><i class="fas fa-file-alt"></i> Выбранные файлы:</h4>
+                        <div class="file-list" id="fileList"></div>
+                    </div>
+
+                    <!-- Индикатор прогресса -->
+                    <div class="progress-container" id="progressContainer" style="display: none;">
+                        <div class="progress-header">
+                            <span>Подготовка к проверке</span>
+                            <span class="progress-percent" id="progressPercent">0%</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                            <div class="progress-glow"></div>
+                        </div>
+                    </div>
+
+                    <!-- Кнопка проверки -->
+                    <div class="form-actions">
+                        <button type="button" class="scan-btn" id="scanBtn" onclick="do_scan_file_01();">
+                            <span class="btn-text">Проверить на вирусы</span>
+                            <span class="btn-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </span>
+                            <div class="btn-glow"></div>
+                        </button>
+                        
+                        <div class="security-info">
+                            <i class="fas fa-lock"></i>
+                            <span>Ваши файлы защищены и не сохраняются на сервере</span>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Информационные блоки -->
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-bug"></i>
+                    </div>
+                    <h4>Обнаружение угроз</h4>
+                    <p>Находит вирусы, трояны, шпионское ПО и другие угрозы</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <h4>Быстрая проверка</h4>
+                    <p>Мгновенный анализ файлов без ожидания</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h4>Конфиденциальность</h4>
+                    <p>Файлы удаляются сразу после проверки</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Футер -->
+        <div class="footer">
+            <p>© 2023 Dr.Web. Все права защищены.</p>
+            <p class="footer-links">
+                <a href="#"><i class="fas fa-shield-alt"></i> Безопасность</a>
+                <a href="#"><i class="fas fa-question-circle"></i> Помощь</a>
+                <a href="#"><i class="fas fa-file-contract"></i> Условия</a>
+            </p>
+        </div>
+
+        <!-- Анимированный сканер -->
+        <div class="virus-scanner">
+            <div class="scanner-line"></div>
+            <div class="scanner-dot"></div>
+        </div>
+    </div>
+
+    <!-- Скрипты -->
+    <script>
+        // Анимация частиц
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const particleCount = 30;
+            
+            for (let i = 0; i < particleCount; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+                particle.style.animationDelay = `${Math.random() * 5}s`;
+                particle.style.width = `${Math.random() * 4 + 2}px`;
+                particle.style.height = particle.style.width;
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Обработка drag & drop
+        function setupDragDrop() {
+            const uploadZone = document.getElementById('uploadZone');
+            const fileInput = document.getElementById('file_selection_input');
+            const selectedFiles = document.getElementById('selectedFiles');
+            const fileList = document.getElementById('fileList');
+            const scanBtn = document.getElementById('scanBtn');
+            const progressContainer = document.getElementById('progressContainer');
+            const progressFill = document.getElementById('progressFill');
+            const progressPercent = document.getElementById('progressPercent');
+
+            // Клик по зоне загрузки
+            uploadZone.addEventListener('click', () => {
+                fileInput.click();
+            });
+
+            // Drag & drop события
+            ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+                uploadZone.addEventListener(eventName, preventDefaults, false);
+            });
+
+            function preventDefaults(e) {
+                e.preventDefault();
+                e.stopPropagation();
+            }
+
+            ['dragenter', 'dragover'].forEach(eventName => {
+                uploadZone.addEventListener(eventName, highlight, false);
+            });
+
+            ['dragleave', 'drop'].forEach(eventName => {
+                uploadZone.addEventListener(eventName, unhighlight, false);
+            });
+
+            function highlight() {
+                uploadZone.classList.add('drag-over');
+            }
+
+            function unhighlight() {
+                uploadZone.classList.remove('drag-over');
+            }
+
+            // Обработка drop
+            uploadZone.addEventListener('drop', handleDrop, false);
+
+            function handleDrop(e) {
+                const dt = e.dataTransfer;
+                const files = dt.files;
+                handleFiles(files);
+            }
+
+            // Обработка выбора файлов
+            fileInput.addEventListener('change', function() {
+                handleFiles(this.files);
+            });
+
+            function handleFiles(files) {
+                if (files.length === 0) return;
+                
+                fileList.innerHTML = '';
+                
+                for (let i = 0; i < files.length; i++) {
+                    const file = files[i];
+                    
+                    // Проверка размера файла
+                    if (file.size > 10 * 1024 * 1024) {
+                        alert(`Файл "${file.name}" превышает максимальный размер 10 МБ`);
+                        continue;
+                    }
+                    
+                    const fileItem = document.createElement('div');
+                    fileItem.className = 'file-item';
+                    fileItem.innerHTML = `
+                        <div class="file-icon">
+                            <i class="fas ${getFileIcon(file.name)}"></i>
+                        </div>
+                        <div class="file-details">
+                            <div class="file-name">${file.name}</div>
+                            <div class="file-size">${formatFileSize(file.size)}</div>
+                        </div>
+                        <button class="remove-file" onclick="removeFile(this)">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    `;
+                    fileList.appendChild(fileItem);
+                }
+                
+                if (fileList.children.length > 0) {
+                    selectedFiles.style.display = 'block';
+                    scanBtn.classList.add('active');
+                    
+                    // Анимация появления кнопки
+                    setTimeout(() => {
+                        scanBtn.style.transform = 'scale(1.05)';
+                        setTimeout(() => {
+                            scanBtn.style.transform = 'scale(1)';
+                        }, 200);
+                    }, 100);
+                }
+            }
+
+            // Функция удаления файла
+            window.removeFile = function(button) {
+                const fileItem = button.closest('.file-item');
+                fileItem.style.transform = 'translateX(100%)';
+                fileItem.style.opacity = '0';
+                
+                setTimeout(() => {
+                    fileItem.remove();
+                    
+                    if (fileList.children.length === 0) {
+                        selectedFiles.style.display = 'none';
+                        scanBtn.classList.remove('active');
+                    }
+                }, 300);
+            };
+
+            // Симуляция прогресса при нажатии кнопки
+            scanBtn.addEventListener('click', function(e) {
+                if (fileList.children.length === 0) {
+                    e.preventDefault();
+                    alert('Пожалуйста, выберите файл для проверки');
+                    return;
+                }
+
+                progressContainer.style.display = 'block';
+                let progress = 0;
+                
+                const progressInterval = setInterval(() => {
+                    progress += Math.random() * 10;
+                    if (progress > 100) progress = 100;
+                    
+                    progressFill.style.width = `${progress}%`;
+                    progressPercent.textContent = `${Math.round(progress)}%`;
+                    
+                    if (progress >= 100) {
+                        clearInterval(progressInterval);
+                        setTimeout(() => {
+                            progressContainer.style.display = 'none';
+                            progressFill.style.width = '0%';
+                            progressPercent.textContent = '0%';
+                        }, 1000);
+                    }
+                }, 100);
+            });
+        }
+
+        // Вспомогательные функции
+        function getFileIcon(filename) {
+            const ext = filename.split('.').pop().toLowerCase();
+            const icons = {
+                'exe': 'fa-cogs',
+                'zip': 'fa-file-archive',
+                'rar': 'fa-file-archive',
+                'pdf': 'fa-file-pdf',
+                'doc': 'fa-file-word',
+                'docx': 'fa-file-word',
+                'xls': 'fa-file-excel',
+                'xlsx': 'fa-file-excel',
+                'jpg': 'fa-file-image',
+                'jpeg': 'fa-file-image',
+                'png': 'fa-file-image',
+                'txt': 'fa-file-alt',
+                'mp3': 'fa-file-audio',
+                'mp4': 'fa-file-video'
+            };
+            return icons[ext] || 'fa-file';
+        }
+
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+        }
+
+        // Оригинальная функция отправки формы
+        function do_scan_file_01() {
+            const fileList = document.getElementById('fileList');
+            if (fileList.children.length === 0) {
+                alert('Пожалуйста, выберите файл для проверки');
+                return false;
+            }
+
+            const left = (screen.width - 640) / 2;
+            const top = (screen.height - 400) / 2;
+            window.open("", "drweb_scan_drweb-form_popup_window",
+                "width=640,height=400,left=" + left + ",top=" + top + ",scrollbars=yes,resizable=yes");
+            document.getElementById("drweb_online_scan_form").submit();
+        }
+
+        // Инициализация при загрузке страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            createParticles();
+            setupDragDrop();
+            
+            // Анимация появления элементов
+            const elements = document.querySelectorAll('.drweb-card, .footer, .virus-scanner');
+            elements.forEach((el, index) => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(20px)';
+                
+                setTimeout(() => {
+                    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                    el.style.opacity = '1';
+                    el.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+            
+            // Анимация сканера
+            const scanner = document.querySelector('.virus-scanner');
+            setInterval(() => {
+                scanner.style.left = `${Math.random() * 80 + 10}%`;
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
